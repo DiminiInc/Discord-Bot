@@ -2,9 +2,6 @@ var Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
 
-const host = '0.0.0.0';
-const port = process.env.PORT || 3000;
-
 // Configure logger settings
 logger.remove(logger.transports.Console);
 logger.add(new logger.transports.Console, {
@@ -40,4 +37,26 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             // Just add any case commands if you want to..
          }
      }
+     if (message.substring(0, 1) == '@') {
+        var args = message.substring(1).split(' ');
+        var cmd = args[0];
+       
+        args = args.splice(1);
+        switch(cmd) {
+            // !ping
+            case 'kadavr95#7131 ':
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'ќн не реагирует на призывы без приложенных файлов с €оем'
+                });
+            break;
+            // Just add any case commands if you want to..
+         }
+     }
 });
+
+http.createServer(function (request, response) {
+
+
+
+ }).listen(process.env.PORT || 5000);
