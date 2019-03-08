@@ -38,7 +38,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             case 'НайдиЯойщика':
                 bot.sendMessage({
                     to: channelID,
-                    message: "Это же "+"<@" + 301010748145139713 + ">"
+                    message: "Это же "+"<@301010748145139713>"
                 });
             break;
             case 'помощь':
