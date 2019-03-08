@@ -35,7 +35,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 });
 
             break;
-            case 'Найди яойщика':
+            case 'НайдиЯойщика':
                 bot.sendMessage({
                     to: channelID,
                     message: 'Это же @kadavr95#7131'
