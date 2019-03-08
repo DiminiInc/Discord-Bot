@@ -54,9 +54,3 @@ bot.on('message', function (user, userID, channelID, message, evt) {
          }
      }
 });
-
-http.createServer(function (request, response) {
-
-
-
- }).listen(process.env.PORT || 5000);
