@@ -4,6 +4,9 @@
   "description": "Dimini test bot for Discord",
   "main": "bot.js",
   "author": "Dmitry Yaskovich",
+  "scripts": {
+    "start": "node bot.js"
+  }
   "dependencies": {
     "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
     "winston": "^3.2.1"
