@@ -33,23 +33,19 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID,
                     message: 'Pong!'
                 });
+
             break;
-            // Just add any case commands if you want to..
-         }
-     }
-     if (message.substring(0, 1) == '@') {
-        var args = message.substring(1).split(' ');
-        var cmd = args[0];
-       
-        args = args.splice(1);
-        switch(cmd) {
-            // !ping
             case 'kadavr95':
                 bot.sendMessage({
                     to: channelID,
                     message: 'ќн не реагирует на призывы без приложенных файлов с €оем'
                 });
             break;
+            default:
+                bot.sendMessage({
+                    to: channelID,
+                    message: '‘ункционал бота сравним с прибылью компании, отстаньте от него'
+                });
             // Just add any case commands if you want to..
          }
      }
