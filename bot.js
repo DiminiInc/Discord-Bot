@@ -35,10 +35,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 });
 
             break;
-            case 'kadavr95':
+            case 'Ќайди €ойщика':
                 bot.sendMessage({
                     to: channelID,
-                    message: 'ќн не реагирует на призывы без приложенных файлов с €оем'
+                    message: 'Ёто же @kadavr95#7131'
                 });
             break;
             default:
