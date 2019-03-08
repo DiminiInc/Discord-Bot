@@ -38,7 +38,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             case 'НайдиЯойщика':
                 bot.sendMessage({
                     to: channelID,
-                    message: 'Это же @kadavr95#7131'
+                    message: "Это же "+"<@!" + 301010748145139713 + ">"
+                });
+            break;
+            case 'помощь':
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Список команд: \n !помощь - список команд \n !НайдиЯойщика - ищет главного яойщика сервера'
                 });
             break;
             default:
