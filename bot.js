@@ -1,4 +1,4 @@
-var Discord = require('discord.io');
+п»їvar Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
 
@@ -35,16 +35,16 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 });
 
             break;
-            case 'Найди яойщика':
+            case 'РќР°Р№РґРё СЏРѕР№С‰РёРєР°':
                 bot.sendMessage({
                     to: channelID,
-                    message: 'Это же @kadavr95#7131'
+                    message: 'Р­С‚Рѕ Р¶Рµ @kadavr95#7131'
                 });
             break;
             default:
                 bot.sendMessage({
                     to: channelID,
-                    message: 'Функционал бота сравним с прибылью компании, отстаньте от него'
+                    message: 'Р¤СѓРЅРєС†РёРѕРЅР°Р» Р±РѕС‚Р° СЃСЂР°РІРЅРёРј СЃ РїСЂРёР±С‹Р»СЊСЋ РєРѕРјРїР°РЅРёРё, РѕС‚СЃС‚Р°РЅСЊС‚Рµ РѕС‚ РЅРµРіРѕ'
                 });
             // Just add any case commands if you want to..
          }
