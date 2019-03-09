@@ -47,10 +47,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: 'Список команд: \n !помощь - список команд \n !НайдиЯойщика - ищет главного яойщика сервера'
                 });
             case 'выключиИлью':
-                let mute_role = msg.guild.roles.find("happydon#4501", "Shut up, Priest");
-                let member = msg.mentions.members.first();
-                member.addRole(mute_role); // <- this assign the role
-                setTimeout(() => {member.removeRole(mute_role);}, 60 * 1000); // <- sets a timeout to unmute the user.
+		  let userToModify = '193654001089118208';
+                  let roleToAdd = '553970136650874889';
+                  userToModify.addRole(roleToAdd);
             break;
             default:
                 bot.sendMessage({
