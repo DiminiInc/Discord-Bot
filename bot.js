@@ -53,7 +53,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			    revenue = 7.17;               // no arguments -> current date
 				Math.round((now-start)/(1000*60*60*24)*100/revenue); // round the amount of days
 				end= new Date(now+Math.round((now-start)*100/revenue));
-				var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+				var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
 				end.setDate(now.getDate() + Math.round((now-start)/(1000*60*60*24)*100/revenue)); 
 				//end.toLocaleDateString("ru-ru")
                 bot.sendMessage({
