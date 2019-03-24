@@ -33,7 +33,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID,
                     message: 'Pong!'
                 });
-
             break;
             case 'НайдиЯойщика':
                 bot.sendMessage({
@@ -44,13 +43,35 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             case 'помощь':
                 bot.sendMessage({
                     to: channelID,
-                    message: 'Список команд: \n !помощь - список команд \n !НайдиЯойщика - ищет главного яойщика сервера'
+                    message: 'Список команд: \n !помощь - список команд \n !НайдиЯойщика - ищет главного яойщика сервера \n !ГдеДеньгиЗин - рассчитывает дату получения первой прибыли компании'
                 });
-            case 'выключиИлью':
-		  let userToModify = '193654001089118208';
-                  let roleToAdd = '553970136650874889';
-                  userToModify.addRole(roleToAdd);
             break;
+            case 'ГдеДеньгиЗин':
+            	var start = new Date(2014, 06, 09), // month is zero based
+			    now  = new Date,
+			    end,
+			    revenue = 7.17;               // no arguments -> current date
+				Math.round((now-start)/(1000*60*60*24)*100/revenue); // round the amount of days
+				end= new Date(now+Math.round((now-start)*100/revenue));
+				var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+				end.setDate(now.getDate() + Math.round((now-start)/(1000*60*60*24)*100/revenue)); 
+				//end.toLocaleDateString("ru-ru")
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Первая прибыль компании ожидается '+end.toLocaleDateString("ru-ru", options)+' (через '+Math.round((now-start)/(1000*60*60*24)*100/revenue)+' дней)\n'
+                });
+            break;
+            case 'ОБоте':
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Dimini Bot\nVersion 0.0.2\nbuild 20190324184400\nDevelopment: Dmitry Yaskovich\n'
+                });
+            break;
+    //         case 'выключиИлью':
+		  // let userToModify = message.mentions.members.first();
+    //               let roleToAdd = message.mentions.roles.first();
+    //               userToModify.addRole(roleToAdd);
+    //         break;
             default:
                 bot.sendMessage({
                     to: channelID,
