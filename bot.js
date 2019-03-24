@@ -58,13 +58,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				//end.toLocaleDateString("ru-ru")
                 bot.sendMessage({
                     to: channelID,
-                    message: 'Первая прибыль компании ожидается '+end.toLocaleDateString("ru-ru", options)+' (через '+Math.round((now-start)/(1000*60*60*24)*100/revenue)+' дней)\n'
+                    message: 'Первая прибыль компании ожидается '+end.getDate()+'.'+(end.getMonth()+1)+'.'+end.getFullYear()+' (через '+Math.round((now-start)/(1000*60*60*24)*100/revenue)+' дней)\n'
                 });
             break;
             case 'ОБоте':
                 bot.sendMessage({
                     to: channelID,
-                    message: 'Dimini Bot\nVersion 0.0.2\nbuild 20190324184400\nDevelopment: Dmitry Yaskovich\n'
+                    message: 'Dimini Bot\nVersion 0.0.2.1\nbuild 20190324190000\nDevelopment: Dmitry Yaskovich\n'
                 });
             break;
     //         case 'выключиИлью':
