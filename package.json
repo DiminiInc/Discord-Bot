@@ -1,6 +1,6 @@
 {
   "name": "Dimini-Test-Bot",
-  "version": "0.0.1",
+  "version": "0.0.2.3",
   "description": "Dimini test bot for Discord",
   "main": "bot.js",
   "author": "Dmitry Yaskovich",
