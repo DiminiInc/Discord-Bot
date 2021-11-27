@@ -66,7 +66,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             case 'ОБоте':
                 bot.sendMessage({
                     to: channelID,
-                    message: 'Dimini Bot\nVersion 0.0.3\nbuild 20211127173000\nDevelopment: Dmitry Yaskovich\n'
+                    message: 'Dimini Bot\nVersion 0.0.3.1\nbuild 20211127201000\nDevelopment: Dmitry Yaskovich\n'
                 });
             break;
     //         case 'выключиИлью':
