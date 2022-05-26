@@ -52,7 +52,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             	var start = new Date(2014, 06, 09), // month is zero based
 			    now  = new Date,
 			    end,
-			    revenue = 7.5;               // no arguments -> current date
+			    revenue = 7.53;               // no arguments -> current date
 				Math.round((now-start)/(1000*60*60*24)*100/revenue); // round the amount of days
 				end= new Date(now+Math.round((now-start)*100/revenue));
 				var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
